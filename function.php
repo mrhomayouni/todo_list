@@ -13,7 +13,7 @@ function insert($explanation, $status, $date)
     $stmt->execute();
 }
 
-function show0(int $status,string $date)
+function show0(int $status, string $date)
 {
     global $db;
 
@@ -33,5 +33,15 @@ function delete($id)
     $sql = "DELETE FROM `task` WHERE `id`=:id";
     $stmt = $db->prepare($sql);
     $stmt->bindValue("id", $id);
+    $stmt->execute();
+}
+
+function update($id, $status)
+{
+    global $db;
+    $sql = "UPDATE `task` SET `status`=:status WHERE `id`=:id";
+    $stmt = $db->prepare($sql);
+    $stmt->bindValue("id",$id);
+    $stmt->bindValue("status",$status);
     $stmt->execute();
 }

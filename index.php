@@ -63,7 +63,7 @@ require "function.php";
                                 <div class="one0"><p> تاریخ: <?= $task["date"] ?> </p></div>
                                 <form action="" method="post">
                                     <a href="delete.php?task_id=<?= $task["id"] ?>" class="btn btn-outline-primary">delete</a>
-                                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-check"></i></a>
+                                    <a href="status.php?id=<?=$task["id"]?>&status=1" class="btn btn-outline-primary"><i class="bi bi-check"></i></a>
                                 </form>
                             </div>
                         </td>
@@ -89,7 +89,7 @@ require "function.php";
                                 <div class="one0"><p> تاریخ: <?= $task["date"] ?> </p></div>
                                 <form action="" method="post">
                                     <a href="delete.php?task_id=<?= $task["id"] ?>" class="btn btn-outline-primary">delete</a>
-                                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-check"></i></a>
+                                    <a  href="status.php?id=<?=$task["id"]?>&status=2" class="btn btn-outline-primary"><i class="bi bi-check"></i></a>
                                 </form>
                             </div>
                         </td>
