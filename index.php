@@ -1,8 +1,6 @@
 <?php
 
 require "function.php";
-
-
 ?>
 
 
@@ -42,7 +40,7 @@ require "function.php";
 <body dir="rtl">
 
 <form action="" method="post">
-    <label > انتخاب تاریخ:</label>
+    <label> انتخاب تاریخ:</label>
     <input type="date" name="date">
     <input type="submit" value="send" name="select_date">
 </form>
@@ -56,11 +54,11 @@ require "function.php";
 
     <tr>
         <td>
-            <table >
+            <table>
                 <?php
-                if(isset($_POST["select_date"])):
-                $date=$_POST["date"];
-                $tasks = show0(0,$date);
+                if (isset($_POST["select_date"])):
+                $date = $_POST["date"];
+                $tasks = show0(0, $date);
                 foreach ($tasks as $task) {
 
                     ?>
@@ -86,7 +84,7 @@ require "function.php";
         <td>
             <table>
                 <?php
-                $tasks = show0(1,$date);
+                $tasks = show0(1, $date);
 
                 foreach ($tasks as $task) {
                     ?>
@@ -109,7 +107,7 @@ require "function.php";
         <td>
             <table>
                 <?php
-                $tasks = show0(2,$date);
+                $tasks = show0(2, $date);
                 foreach ($tasks as $task) {
                     ?>
                     <tr>

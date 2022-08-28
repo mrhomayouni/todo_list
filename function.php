@@ -1,11 +1,10 @@
 <?php
-
 require "db.php";
-
 
 function insert($explanation, $status, $date)
 {
     global $db;
+
     $sql = "INSERT INTO `task`(`explanation`, `status`, `date`) VALUES (:explanation,:status,:date)";
     $stmt = $db->prepare($sql);
     $stmt->bindValue("explanation", $explanation);
@@ -17,6 +16,7 @@ function insert($explanation, $status, $date)
 function show0($status, $date)
 {
     global $db;
+
     $sql = "SELECT * FROM `task` WHERE `status`=:status AND `date`=:date";
     $stmt = $db->prepare($sql);
     $stmt->bindValue("status", $status);
@@ -29,23 +29,9 @@ function show0($status, $date)
 function delete($id)
 {
     global $db;
+
     $sql = "DELETE FROM `task` WHERE `id`=:id";
     $stmt = $db->prepare($sql);
     $stmt->bindValue("id", $id);
     $stmt->execute();
 }
-
-
-?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
