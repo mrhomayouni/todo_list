@@ -2,11 +2,9 @@
 
 require "function.php";
 ?>
-
-
 <html lang="en">
 <head>
-    <title>Bootstrap 5 Example</title>
+    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +31,6 @@ require "function.php";
             width: 200px;
             vertical-align: top;
         }
-
     </style>
 
 </head>
@@ -51,7 +48,6 @@ require "function.php";
         <th>در حال انجام</th>
         <th>انجام شده</th>
     </tr>
-
     <tr>
         <td>
             <table>
@@ -59,9 +55,7 @@ require "function.php";
                 if (isset($_POST["select_date"])):
                 $date = $_POST["date"];
                 $tasks = show0(0, $date);
-                foreach ($tasks as $task) {
-
-                    ?>
+                foreach ($tasks as $task) { ?>
                     <tr>
                         <td>
                             <div class="one">
@@ -127,17 +121,6 @@ require "function.php";
             </table>
         </td>
     </tr>
-
-
 </table>
-<!--<div class="one">
-    <div> <h2> task </h2> </div>
-    <div class="one0"> <p> تاریخ:</p> </div>
-    <form action="" method="post" >
-        <input type="button" value="delete" class="delete">
-        <input type="button" value="ok">
-    </form>
-</div>-->
-
 </body>
 </html>

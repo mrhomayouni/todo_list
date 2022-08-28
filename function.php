@@ -13,7 +13,7 @@ function insert($explanation, $status, $date)
     $stmt->execute();
 }
 
-function show0($status, $date)
+function show0(int $status,string $date)
 {
     global $db;
 
